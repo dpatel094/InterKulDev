@@ -19,15 +19,15 @@ class WebsocketItem {
         @Throws(JSONException::class)
         fun fromJson(jsonObject: JSONObject): WebsocketItem {
             val websocketItem = WebsocketItem()
-            websocketItem.symbol = (jsonObject.getString("s"))
-            websocketItem.tradeId = (jsonObject.getLong("t"))
-            websocketItem.price = (jsonObject.getDouble("p"))
-            websocketItem.quantity = (jsonObject.getDouble("q"))
-            websocketItem.buyerOrderId = (jsonObject.getLong("b"))
-            websocketItem.sellerOrderId = (jsonObject.getLong("a"))
-            websocketItem.tradeTime = (jsonObject.getLong("T"))
-            websocketItem.isBuyerMaker = (jsonObject.getBoolean("m"))
-            websocketItem.isBestMatch = (jsonObject.getBoolean("M"))
+            websocketItem.symbol = jsonObject.getString("s")
+            websocketItem.tradeId = jsonObject.getLong("t")
+            websocketItem.price = jsonObject.getDouble("p")
+            websocketItem.quantity = jsonObject.getDouble("q")
+            websocketItem.buyerOrderId = jsonObject.getLong("b")
+            websocketItem.sellerOrderId = jsonObject.getLong("a")
+            websocketItem.tradeTime = jsonObject.getLong("T")
+            websocketItem.isBuyerMaker = jsonObject.getBoolean("m")
+            websocketItem.isBestMatch = jsonObject.getBoolean("M")
             return websocketItem
         }
     }

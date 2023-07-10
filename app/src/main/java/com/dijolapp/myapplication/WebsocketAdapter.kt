@@ -20,7 +20,7 @@ class WebsocketAdapter(private val tradeList: List<WebsocketItem>?) :
         val tradeItem = tradeList?.get(position)
         holder.textSymbol.text = "Symbol : "+tradeItem!!.symbol
         holder.textPrice.text = "Price : "+tradeItem.price.toString()
-        // Bind other data to views here if needed
+
     }
 
     override fun getItemCount(): Int {

@@ -8,7 +8,6 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.text.HtmlCompat
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import org.java_websocket.client.WebSocketClient
 import org.java_websocket.handshake.ServerHandshake
@@ -17,7 +16,7 @@ import java.net.URI
 import java.net.URISyntaxException
 
 
-class MainActivity : AppCompatActivity() {
+class WebsocketActivity : AppCompatActivity() {
     private var connectButton: Button? = null
     private var disconnectButton: Button? = null
     private var outputTxt: TextView? = null
@@ -32,7 +31,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_websocket)
         connectButton = findViewById(R.id.connectButton)
         disconnectButton = findViewById(R.id.disconnectButton)
         rv = findViewById(R.id.recyclerView)
