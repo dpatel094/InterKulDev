@@ -1,23 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- item_trade.xml -->
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="5dp"
+    app:cardCornerRadius="5dp"
+    android:layout_margin="5dp"
+    android:layout_height="wrap_content">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/ll_layout"
+        android:layout_toStartOf="@+id/ic_icon"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textSymbol"
-        android:layout_width="wrap_content"
-        android:text="Symbol"
-        android:textSize="18sp"
-        android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/textSymbol"
+            android:layout_width="wrap_content"
+            android:text="Symbol"
+            android:textSize="18sp"
+            android:layout_height="wrap_content" />
 
-    <TextView
-        android:id="@+id/textPrice"
-        android:layout_width="wrap_content"
-        android:text="Price"
-        android:textSize="18sp"
-        android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/textPrice"
+            android:layout_width="wrap_content"
+            android:text="Price"
+            android:textSize="18sp"
+            android:layout_height="wrap_content" />
 
 
-</LinearLayout>
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/ic_icon"
+        android:layout_width="20dp"
+        android:visibility="gone"
+        android:layout_height="20dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerInParent="true"
+        android:src="@drawable/ic_baseline_keyboard_arrow_down_24"
+       />
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/layout_hidden"
+        android:layout_below="@+id/ll_layout"
+        android:layout_toStartOf="@+id/ic_icon"
+        android:layout_marginHorizontal="5dp"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/Rview_"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+        </androidx.recyclerview.widget.RecyclerView>
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>
