@@ -82,11 +82,11 @@ class TaskOneAdapter(
                 if (compoundButton.isPressed) {
                     if (b) {
                         tradeItem.selected = b
-                        clickInterface!!.onSelect(tradeList)
+                        clickInterface!!.onSelect(tradeItem)
 
                     } else {
                         tradeItem.selected = b
-                        clickInterface!!.onSelect(tradeList)
+                       // clickInterface!!.onSelect(tradeItem)
                     }
                 }
             }

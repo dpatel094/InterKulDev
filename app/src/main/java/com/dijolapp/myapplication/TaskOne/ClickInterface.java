@@ -8,9 +8,8 @@ import org.jetbrains.annotations.NotNull;
 import java.util.ArrayList;
 
 public interface ClickInterface {
-    void onSelect(Task_One taskOne);
 
-    void onSelect( String street);
+    void onSelectBottom(Address address,Integer position);
 
-    void onSelect(@NotNull ArrayList<Address> tradeList);
+    void onSelect(Address address);
 }

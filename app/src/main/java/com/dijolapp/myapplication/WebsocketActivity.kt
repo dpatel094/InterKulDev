@@ -1,5 +1,6 @@
 package com.dijolapp.myapplication
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -92,6 +93,7 @@ class WebsocketActivity : AppCompatActivity() {
     var oldPrice = 0.0
     var price = 0.0
     var color = "#00FF00"
+    @SuppressLint("NotifyDataSetChanged")
     fun  getValue(message :String){
         val data = JSONObject(message)
         price = data.getDouble("p")
@@ -113,6 +115,11 @@ class WebsocketActivity : AppCompatActivity() {
             }
         }.run()
 
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        disconnectWebSocket()
     }
 
 }
