@@ -28,7 +28,7 @@ class HorizontalAdapter(
         holder.txtName.text =  tradeItem.street
         holder.ic_icon.setOnClickListener {
             tradeItem.selected = false
-            clickInterface.onSelectBottom(tradeItem,position)
+            clickInterface.onSelect(tradeItem)
         }
 
     }

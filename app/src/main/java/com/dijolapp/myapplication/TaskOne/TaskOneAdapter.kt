@@ -86,7 +86,7 @@ class TaskOneAdapter(
 
                     } else {
                         tradeItem.selected = b
-                       // clickInterface!!.onSelect(tradeItem)
+                        clickInterface!!.onSelect(tradeItem)
                     }
                 }
             }

@@ -48,7 +48,13 @@ class Task_One : AppCompatActivity() {
             override fun onSelect(tradeLis: Address) {
 
 
-                addressList!!.addAll(listOf(tradeLis))
+                if (tradeLis.selected!!){
+                    addressList!!.addAll(listOf(tradeLis))
+                }else{
+                    addressList!!.removeAll(listOf(tradeLis).toSet())
+                }
+
+
                 horizontalAdapter!!.notifyDataSetChanged()
                 taskOneAdapter!!.notifyDataSetChanged()
             }
